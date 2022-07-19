@@ -2,12 +2,12 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import { Provider } from "react-redux";
-import { ApolloClient, ApolloProvider, createHttpLink } from "@apollo/client";
+// import { Provider } from "react-redux";
+import { ApolloClient, ApolloProvider } from "@apollo/client";
 
-const httpLink = createHttpLink({
-    // uri: "/graphql",
-});
+// const httpLink = createHttpLink({
+//     // uri: "/graphql",
+// });
 
 const client = new ApolloClient({
     // link: authLink.concat(httpLink),
