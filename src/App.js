@@ -10,16 +10,16 @@ const httpLink = createHttpLink({
 });
 
 const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
+    // link: authLink.concat(httpLink),
+    // cache: new InMemoryCache(),
 });
 
 function App() {
     return (
         <ApolloProvider client={client}>
             <Router>
-                <Provider store={store}>
-                    {/* <div className="App">
+                {/* <Provider store={store}> */}
+                {/* <div className="App">
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
                         <p>
@@ -30,10 +30,10 @@ function App() {
                         </a>
                     </header>
                 </div> */}
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                    </Routes>
-                </Provider>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+                {/* </Provider> */}
             </Router>
         </ApolloProvider>
     );
